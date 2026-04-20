@@ -37,7 +37,7 @@ class LazySqlxApp(App):
         Binding("d", "delete", "Delete"),
         Binding("D", "db_reset", "DB reset"),
         Binding("e", "edit", "Edit"),
-        Binding("tab", "toggle_direction", "up/down"),
+        Binding("tab", "toggle_direction", "up/down", priority=True),
         Binding("q", "quit", "Quit"),
         # Navigation & aliases (hidden from footer)
         Binding("h", "focus_list", "Focus list", show=False),

@@ -3,6 +3,7 @@ name = "lazysqlx"
 version = "0.1.0"
 description = "A lazygit-inspired TUI for sqlx database migrations"
 readme = "README.md"
+license = { file = "LICENSE" }
 requires-python = ">=3.10"
 dependencies = [
     "textual>=0.80",

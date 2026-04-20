@@ -1,0 +1,15 @@
+name: Subtask
+description: Create a subtask. Please do not use this unless you are working on an issue already
+title: "subtask: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not** use this unless you are organizing work you are already contributing.
+        Use this to organize your subtasks under a parent issue.
+  - type: textarea
+    attributes:
+      label: Describe what needs to be done
+      description: A clear and concise description of the task
+    validations:
+      required: true

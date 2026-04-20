@@ -1,0 +1,81 @@
+name: Bug Report
+description: File a bug/issue
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Before** reporting an issue, make sure to read the [README](https://github.com/DrewCCannedy/lazysqlx)
+        and search [existing issues](https://github.com/DrewCCannedy/lazysqlx/issues).
+
+        Usage questions such as ***"How do I...?"*** belong in [Discussions](https://github.com/DrewCCannedy/lazysqlx/discussions) and will be closed.
+  - type: checkboxes
+    attributes:
+      label: Did you check docs and existing issues?
+      description: Make sure you checked all of the below before submitting an issue
+      options:
+        - label: I have read the lazysqlx README
+          required: true
+        - label: I have updated to the latest version before submitting this issue
+          required: true
+        - label: I have searched the existing issues of lazysqlx
+          required: true
+        - label: I have searched existing issues of related projects (sqlx-cli, Textual)
+          required: true
+  - type: input
+    attributes:
+      label: "lazysqlx version (lazysqlx --version)"
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: "sqlx-cli version (sqlx --version)"
+      placeholder: "sqlx-cli 0.8.2"
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: "Database backend"
+      placeholder: "SQLite / Postgres / MySQL"
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: "Operating system/version"
+      placeholder: "Arch Linux / macOS 14 / Ubuntu 22.04"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is. Please include any related errors or tracebacks shown by lazysqlx.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps To Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Acceptance Criteria
+      description: What is your thought on what the new behavior must be?
+      placeholder: |
+        The TUI should no longer panic when this scenario described in 'Steps to Reproduce' happens
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Potential cause
+      description: If you are technical, what do you think it might be?
+      placeholder: |
+        Looks like the sqlx output parser is tripping on a non-ASCII character in the migration description
+    validations:
+      required: false
